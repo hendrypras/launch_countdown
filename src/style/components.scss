@@ -1,0 +1,13 @@
+@import './global-style.scss';
+@import './color.scss';
+@mixin button {
+  @include directionXCenter;
+  border-radius: 8px;
+  padding: 8px 15px;
+  color: white;
+  font-size: 16px;
+  background-color: $grayish-blue;
+  font-weight: 600;
+  width: max-content;
+  cursor: pointer;
+}

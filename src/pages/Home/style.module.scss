@@ -1,0 +1,43 @@
+@import '../../style/color.scss';
+@import '../../style/components.scss';
+@import '../../style/media-screen.scss';
+.home__container {
+  background-image: url('../../assets/images/bg-stars.svg');
+  background-color: $very-dark-mostly-black-blue;
+  .content__home__wrapper {
+    @include directionXCenter;
+    width: 100%;
+    height: 100vh;
+    .wrapper__content {
+      @include directionY;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+      .button__submit {
+        @include button;
+        font-weight: 700;
+      }
+      .button__submit:hover {
+        opacity: 0.8;
+      }
+      .content__text {
+        font-size: 24px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: $white;
+        border: 2px solid black;
+      }
+    }
+    .wrapper__content h1 {
+      font-size: 28px;
+      color: $white;
+      letter-spacing: 3px;
+      @include apply-sm-size {
+        text-align: center;
+      }
+    }
+    .date__picker {
+      background-color: $white;
+    }
+  }
+}

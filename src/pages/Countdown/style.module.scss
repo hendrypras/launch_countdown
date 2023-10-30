@@ -1,0 +1,121 @@
+@import '../../style/color.scss';
+@import '../../style/global-style.scss';
+@import '../../style/media-screen.scss';
+
+.timer__container {
+  background-image: url('../../assets/images/bg-stars.svg'),
+    url('../../assets/images/pattern-hills.svg');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: contain;
+  background-color: $very-dark-blue;
+
+  .timer__wrapper {
+    @include directionY;
+    justify-content: start;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    .content__text {
+      width: max-content;
+      color: $white;
+      margin-top: 10rem;
+      @include apply-sm-size {
+        @include directionXCenter;
+      }
+    }
+    .content__text h1 {
+      @include apply-sm-size {
+        text-align: center;
+        font-size: 20px;
+        max-width: 90%;
+      }
+      font-size: 24px;
+      letter-spacing: 7px;
+    }
+    .timer__inner {
+      @include directionXCenter;
+      margin-top: 7rem;
+      gap: 3rem;
+      @include apply-sm-size {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 4rem;
+      }
+
+      .timer__segment {
+        @include directionY;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        @include apply-sm-size {
+          gap: 10px;
+        }
+        .bg__timer {
+          background-color: $very-dark-mostly-black-blue;
+          border-radius: 10px;
+          width: 180px;
+          height: 180px;
+          padding-bottom: 10px;
+          @include apply-sm-size {
+            width: 80px;
+            height: 80px;
+          }
+          .time {
+            width: 100%;
+            height: 100%;
+            @include directionX;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            background-color: $dark-desaturated-blue;
+            font-size: 5.5rem;
+            font-weight: 700;
+            color: $soft-red;
+            @include apply-sm-size {
+              font-size: 2.2rem;
+            }
+          }
+        }
+        .label {
+          color: $grayish-blue;
+          font-size: 16px;
+          letter-spacing: 6px;
+          font-weight: 700;
+          text-transform: uppercase;
+          @include apply-sm-size {
+            font-size: 8px;
+            letter-spacing: 3px;
+          }
+        }
+      }
+    }
+    .icon__social__media {
+      position: absolute;
+      bottom: 6rem;
+      display: flex;
+      gap: 2rem;
+      @include apply-sm-size {
+        bottom: 3rem;
+      }
+    }
+    .result__wrapper {
+      width: 100%;
+      height: 100%;
+      @include directionXCenter;
+    }
+    .result__wrapper h1 {
+      font-size: 50px;
+      color: $white;
+      font-weight: 800;
+      letter-spacing: 5px;
+      text-shadow: 2px 5px 4px $soft-red;
+      @include apply-sm-size {
+        font-size: 24px;
+        text-align: center;
+      }
+    }
+  }
+}
